@@ -1,5 +1,6 @@
 package by.home.dataexam.entity;
 
+import by.home.dataexam.user.User;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -15,18 +16,18 @@ public class UsersEntity {
     private long id;
 
     @Column(name = "user")
-    private String user;
+    private User user;
     @Column(name = "role")
     private String role;
 
     public UsersEntity() {
     }
 
-    public UsersEntity(String user) {
+    public UsersEntity(User user) {
         this.user = user;
     }
 
-    public UsersEntity(String user, String role) {
+    public UsersEntity(User user, String role) {
         this.user = user;
         this.role = role;
     }
@@ -39,11 +40,11 @@ public class UsersEntity {
         this.id = id;
     }
 
-    public String getUser() {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(String user) {
+    public void setUser(User user) {
         this.user = user;
     }
 
