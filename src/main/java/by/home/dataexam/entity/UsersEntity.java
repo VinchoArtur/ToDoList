@@ -4,6 +4,7 @@ import by.home.dataexam.user.User;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "users_table")
@@ -19,6 +20,16 @@ public class UsersEntity {
     private User user;
     @Column(name = "role")
     private String role;
+
+    private List<User> users;
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
 
     public UsersEntity() {
     }
